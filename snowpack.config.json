@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "snowpack-plugin-vue2"
+  ],
+  "scripts": {
+    "mount:@/": "mount @/ --to /_dist_",
+    "mount:public": "mount public --to /",
+    "mount:web_modules": "mount web_modules",
+    "mount:src": "mount src --to /_dist_"
+  },
+  "installOptions": {
+    "alias": {
+      "vue": "vue/dist/vue.esm.js",
+      "vue-class-component": "vue-class-component/lib/index.js",
+      "vue-tsx-support": "vue-tsx-support/lib/index.js",
+      "vue-tsx-support/enable-check": "vue-tsx-support/enable-check.d.ts",
+      "vue-property-decorator": "vue-property-decorator/lib/vue-property-decorator.umd.js"
+    }
+  }
+}
