@@ -8,11 +8,17 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+
+run width snowpack:
+npm run serve:sp
 ```
 
 ### Compiles and minifies for production
 ```
 npm run build
+
+build width snowpack:
+npm run build:sp
 ```
 
 ### Run your tests
