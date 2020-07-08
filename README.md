@@ -57,6 +57,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 2020.07.08
 加载vue2 template ✅
+待办：
+1、style scoped, add data-v-${id} to DOM
+2、tsx support
+......
 ```
 
 ### snowpack-plugin-vue2
