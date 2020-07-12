@@ -49,7 +49,14 @@ module.exports = function plugin(config, pluginOptions) {
         const templateCode = compileTemplate({
           source: descriptor.template.content,
           filename: filePath,
-          compiler
+          compiler,
+          preprocessLang: descriptor.template.lang,
+          compilerOptions: {
+            scopeId: descriptor.styles.some((s) => s.scoped)
+              ? `data-v-${id}`
+              : null,
+            runtimeModuleName: "/web_modules/vue.js",
+          },
         });
 
         if (templateCode.errors && templateCode.errors.length > 0) {
@@ -58,6 +65,9 @@ module.exports = function plugin(config, pluginOptions) {
         jsResult += `\n${templateCode.code}\n`;
         jsResult += `\ndefaultExport.render = render`;
         jsResult += `\ndefaultExport.staticRenderFns = staticRenderFns`;
+        if (cssResult.includes(id)) {
+          jsResult += `\ndefaultExport._scopeId = 'data-v-${id}'`;
+        }
         jsResult += `\nexport default defaultExport`;
       }
 
