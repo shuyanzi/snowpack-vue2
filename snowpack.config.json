@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "snowpack-plugin-vue2"
+    "snowpack-plugin-vue2",
+    "require-to-import"
   ],
   "scripts": {
     "mount:@/": "mount @/ --to /_dist_",
