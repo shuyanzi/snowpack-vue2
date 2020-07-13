@@ -16,8 +16,7 @@ function requireToImport(nodes) {
     nodes.forEach(function (_node, _idx) {
         if (_node.type === "VariableDeclaration") {
             _node.declarations.forEach(function (__node) {
-                if (__node.init && __node.init.callee &&
-                    __node.init.type === "CallExpression" &&
+                if (__node.init.type === "CallExpression" &&
                     __node.init.callee.type === "Identifier" &&
                     __node.init.callee.name === "require") {
                     var info_1 = {
