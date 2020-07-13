@@ -1,8 +1,15 @@
-// module.exports = {
-//   chainWebpack: config => {
-//     config.optimization.minimizer(false)
-//   },
-//   devServer: {
-//     headers: { 'Access-Control-Allow-Origin': '*'}
-//   }
-// }
+module.exports = {
+  chainWebpack: config => {
+    config.optimization.minimizer(false)
+  },
+  // configureWebpack: {
+  //   resolve: {
+  //     alias: {
+  //       // '@': 'src'
+  //     }
+  //   }
+  // },
+  devServer: {
+    headers: { 'Access-Control-Allow-Origin': '*'}
+  }
+}
