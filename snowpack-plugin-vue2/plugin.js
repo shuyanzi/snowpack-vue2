@@ -65,7 +65,7 @@ module.exports = function plugin(config, pluginOptions) {
         jsResult += `\n${templateCode.code}\n`;
         jsResult += `\ndefaultExport.render = render`;
         jsResult += `\ndefaultExport.staticRenderFns = staticRenderFns`;
-        if (cssResult.includes(id)) {
+        if (cssResult && cssResult.includes(id)) {
           jsResult += `\ndefaultExport._scopeId = 'data-v-${id}'`;
         }
         jsResult += `\nexport default defaultExport`;

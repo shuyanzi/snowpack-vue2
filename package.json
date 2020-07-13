@@ -19,8 +19,8 @@
     "vue-tsx-support": "^2.3.3"
   },
   "devDependencies": {
-    "snowpack-plugin-vue2": "./snowpack-plugin-vue2/snowpack-plugin-vue2-1.0.3.tgz",
-    "require-to-import": "./require-to-import/require-to-import-1.0.1.tgz",
+    "snowpack-plugin-vue2": "./snowpack-plugin-vue2/snowpack-plugin-vue2-1.0.4.tgz",
+    "require-to-import": "./require-to-import/require-to-import-1.0.2.tgz",
     "@vue/cli-plugin-babel": "^4.4.0",
     "@vue/cli-plugin-eslint": "^4.4.0",
     "@vue/cli-service": "^4.4.0",
